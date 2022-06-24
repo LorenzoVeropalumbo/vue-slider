@@ -30,25 +30,10 @@
                     <div v-for="(slide,index) in slides"  @click="clickSlides(index)" class="thumb" :class="{'active': index === currentActiveElement}">
                         <img :src="slides[index].image" :alt="slides[index].title"/>
                     </div>
-                    <!-- <div class="thumb">
-                        <img src="img/02.jpg" alt="Svizzera" />
-                    </div>
-                    <div class="thumb">
-                        <img src="img/03.jpg" alt="Gran Bretagna" />
-                    </div>
-                    <div class="thumb">
-                        <img src="img/04.jpg" alt="Germania" />
-                    </div>
-                    <div class="thumb">
-                        <img src="img/05.jpg" alt="Paradise" />
-                    </div> -->
                 </div>
-
             </div>
         </div>
-
     </div>
-
     <script src="js/script.js"></script>
 </body>
 </html>
