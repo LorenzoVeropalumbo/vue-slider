@@ -33,7 +33,7 @@ var app = new Vue({
     },
     methods: {
         
-        previousSlides(){
+        nextSlides(){
             
             if(this.currentActiveElement > 0) {
                 // Decremento di 1 currentActiveElement
@@ -42,7 +42,7 @@ var app = new Vue({
                 this.currentActiveElement = this.slides.length - 1;
             }
         },
-        nextSlides(){
+        previousSlides(){
             
             if(this.currentActiveElement < this.slides.length - 1) {
                 // Incrementa di 1 currentActiveElement
@@ -55,7 +55,7 @@ var app = new Vue({
             this.currentActiveElement = index;
         },
         timingNextSlides(){
-            this.nextSlides();
+            this.previousSlides();
         },
         blockNextSlides(){
             clearInterval(this.timingFunction);
