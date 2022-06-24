@@ -24,11 +24,11 @@
                     </div>
                 </div>
 
-                <div class="thumbs">
+                <div class="thumbs" @mouseenter="blockNextSlides()" @mouseleave="restartNextSlides()">
                     <div class="prev" @click="nextSlides()"></div>
                     <div class="next" @click="previousSlides()"></div>
-                    <div v-for="(slide,index) in slides" @click="clickSlides(index)"  class="thumb" :class="{'active': index === currentActiveElement}">
-                        <img :src="slides[index].image" alt="slides[currentActiveElement].title"/>
+                    <div v-for="(slide,index) in slides"  @click="clickSlides(index)" class="thumb" :class="{'active': index === currentActiveElement}">
+                        <img :src="slides[index].image" alt="slides[index].title"/>
                     </div>
                     <!-- <div class="thumb">
                         <img src="img/02.jpg" alt="Svizzera" />
