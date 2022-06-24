@@ -43,12 +43,16 @@ var app = new Vue({
             }
         },
         previousSlides(){
+            
             if(this.currentActiveElement < this.slides.length - 1) {
                 // Incrementa di 1 currentActiveElement
                 this.currentActiveElement++;
             } else {
                 this.currentActiveElement = 0;
             }  
+        },
+        clickSlides(index){
+            this.currentActiveElement = index;  
         }
     }
   })
