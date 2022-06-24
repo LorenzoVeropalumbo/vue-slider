@@ -25,8 +25,8 @@
                 </div>
 
                 <div class="thumbs" @mouseenter="blockNextSlides()" @mouseleave="restartNextSlides()">
-                    <div class="prev" @click="nextSlides()"></div>
-                    <div class="next" @click="previousSlides()"></div>
+                    <div class="prev" @click="previousSlides()"></div>
+                    <div class="next" @click="nextSlides()"></div>
                     <div v-for="(slide,index) in slides"  @click="clickSlides(index)" class="thumb" :class="{'active': index === currentActiveElement}">
                         <img :src="slides[index].image" :alt="slides[index].title"/>
                     </div>
